@@ -6,15 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://wanggh8.github.io">
-  <title>Tag: 软件测试 | Blog</title>
+  <title>数据挖掘第一次作业 | Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Blog">
-<meta property="og:url" content="http://wanggh8.github.io/tags/软件测试/index.html">
+  <meta name="description" content="Exercise 1使用蒙特卡洛方法求pi 重复次数设为50，使用matlab实现，代码： myPi.m 12345678910111213141516171819202122function [means,variances] = myPi(num)    % num: 随机样本数    % 使用蒙特卡洛方法求pi    my_pi = zeros(1,50);    for t=1:50">
+<meta name="keywords" content="数据挖掘">
+<meta property="og:type" content="article">
+<meta property="og:title" content="数据挖掘第一次作业">
+<meta property="og:url" content="http://wanggh8.github.io/2019/03/17/DataMining_assign1/index.html">
 <meta property="og:site_name" content="Blog">
+<meta property="og:description" content="Exercise 1使用蒙特卡洛方法求pi 重复次数设为50，使用matlab实现，代码： myPi.m 12345678910111213141516171819202122function [means,variances] = myPi(num)    % num: 随机样本数    % 使用蒙特卡洛方法求pi    my_pi = zeros(1,50);    for t=1:50">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-03-17T06:05:32.552Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Blog">
+<meta name="twitter:title" content="数据挖掘第一次作业">
+<meta name="twitter:description" content="Exercise 1使用蒙特卡洛方法求pi 重复次数设为50，使用matlab实现，代码： myPi.m 12345678910111213141516171819202122function [means,variances] = myPi(num)    % num: 随机样本数    % 使用蒙特卡洛方法求pi    my_pi = zeros(1,50);    for t=1:50">
   
     <link rel="alternative" href="/atom.xml" title="Blog" type="application/atom+xml">
   
@@ -150,60 +155,313 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-DataMining_assign1" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/03/12/stmt_assign_1/" class="archive-article-date">
-  	<time datetime="2019-03-11T16:31:12.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-12</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/03/12/stmt_assign_1/">软件测试第一次作业</a>
+    <h1 class="article-title" itemprop="name">
+      数据挖掘第一次作业
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2019/03/17/DataMining_assign1/" class="archive-article-date">
+  	<time datetime="2019-03-17T05:59:29.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-17</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="Exercise-1"><a href="#Exercise-1" class="headerlink" title="Exercise 1"></a>Exercise 1</h2><p>使用蒙特卡洛方法求pi</p>
+<p>重复次数设为50，使用matlab实现，代码：</p>
+<p><strong>myPi.m</strong></p>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="params">[means,variances]</span> = <span class="title">myPi</span><span class="params">(num)</span></span></span><br><span class="line">    <span class="comment">% num: 随机样本数</span></span><br><span class="line">    <span class="comment">% 使用蒙特卡洛方法求pi</span></span><br><span class="line">    my_pi = <span class="built_in">zeros</span>(<span class="number">1</span>,<span class="number">50</span>);</span><br><span class="line">    <span class="keyword">for</span> t=<span class="number">1</span>:<span class="number">50</span>     </span><br><span class="line">        <span class="comment">%% 生成随机数</span></span><br><span class="line">        s=rng;</span><br><span class="line">        rng(s);</span><br><span class="line">        point=<span class="number">2</span>*<span class="built_in">rand</span>(<span class="number">2</span>,num);   </span><br><span class="line">        <span class="comment">%% 统计落入圆中的点</span></span><br><span class="line">        total_in=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> <span class="built_in">i</span>=<span class="number">1</span>:num</span><br><span class="line">            <span class="keyword">if</span> <span class="built_in">sqrt</span>((point(<span class="number">1</span>,<span class="built_in">i</span>)<span class="number">-1</span>)^<span class="number">2</span>+(point(<span class="number">2</span>,<span class="built_in">i</span>)<span class="number">-1</span>)^<span class="number">2</span>) &lt; <span class="number">1</span></span><br><span class="line">                total_in=total_in+<span class="number">1</span>;</span><br><span class="line">            <span class="keyword">end</span></span><br><span class="line">        <span class="keyword">end</span>     </span><br><span class="line">       <span class="comment">%% 计算pi</span></span><br><span class="line">        my_pi(t)=total_in/num*<span class="number">4</span>;</span><br><span class="line">    <span class="keyword">end</span></span><br><span class="line">    means = mean(my_pi);</span><br><span class="line">    variances = std(my_pi,<span class="number">0</span>,<span class="number">2</span>)^<span class="number">2</span>;</span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
+<p><strong>exercise1.m</strong></p>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">number = [ <span class="number">20</span>,<span class="number">50</span>,<span class="number">100</span>,<span class="number">200</span>,<span class="number">300</span>,<span class="number">500</span>,<span class="number">1000</span>,<span class="number">5000</span>];</span><br><span class="line">result = <span class="built_in">zeros</span>(<span class="number">2</span>,<span class="number">8</span>);</span><br><span class="line"><span class="keyword">for</span> <span class="built_in">i</span>=<span class="number">1</span>:<span class="number">8</span></span><br><span class="line">   [result(<span class="number">1</span>,i),result(<span class="number">2</span>,i)] = myPi(number(<span class="built_in">i</span>));</span><br><span class="line"><span class="keyword">end</span></span><br><span class="line">result</span><br></pre></td></tr></table></figure>
+<h4 id="实验结果："><a href="#实验结果：" class="headerlink" title="实验结果："></a><strong>实验结果：</strong></h4><table>
+<thead>
+<tr>
+<th></th>
+<th style="text-align:center">20</th>
+<th>50</th>
+<th>100</th>
+<th>200</th>
+<th>300</th>
+<th>500</th>
+<th>1000</th>
+<th>5000</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>均值</td>
+<td style="text-align:center">3.1400</td>
+<td>3.1232</td>
+<td>3.2000</td>
+<td>3.1412</td>
+<td>3.1099</td>
+<td>3.1371</td>
+<td>3.1297</td>
+<td>3.1407</td>
+</tr>
+<tr>
+<td>方差</td>
+<td style="text-align:center">0.0886</td>
+<td>0.0580</td>
+<td>0.0269</td>
+<td>0.0125</td>
+<td>0.0096</td>
+<td>0.0061</td>
+<td>0.0023</td>
+<td>0.0006</td>
+</tr>
+</tbody>
+</table>
+<h2 id="Exercise-2"><a href="#Exercise-2" class="headerlink" title="Exercise 2"></a>Exercise 2</h2><p>使用蒙特卡洛方法求定积分</p>
+<p>x使用均分分布采样，这样能保证在边长为1的正方形中各个位置的概率相等，重复次数设为100, matlab代码：</p>
+<p><strong>x3.m</strong></p>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="params">[means,variances]</span> = <span class="title">x3</span><span class="params">(num)</span></span></span><br><span class="line">    <span class="comment">% num: 随机样本数</span></span><br><span class="line">    <span class="comment">% 使用蒙特卡罗方法求定积分</span></span><br><span class="line">    my_res = <span class="built_in">zeros</span>(<span class="number">1</span>,<span class="number">100</span>);</span><br><span class="line">    <span class="keyword">for</span> t=<span class="number">1</span>:<span class="number">100</span>     </span><br><span class="line">        <span class="comment">%% 生成随机数</span></span><br><span class="line">        s=rng;</span><br><span class="line">        rng(s);</span><br><span class="line">        point=<span class="built_in">rand</span>(<span class="number">2</span>,num);   </span><br><span class="line">        <span class="comment">%% 统计线下面的点</span></span><br><span class="line">        total_in=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> <span class="built_in">i</span>=<span class="number">1</span>:num</span><br><span class="line">            <span class="keyword">if</span> (point(<span class="number">1</span>,<span class="built_in">i</span>))^<span class="number">3</span> &gt; point(<span class="number">2</span>,<span class="built_in">i</span>)</span><br><span class="line">                total_in=total_in+<span class="number">1</span>;</span><br><span class="line">            <span class="keyword">end</span></span><br><span class="line">        <span class="keyword">end</span>     </span><br><span class="line">       <span class="comment">%% 计算结果</span></span><br><span class="line">        my_res(t)=total_in/num;</span><br><span class="line">    <span class="keyword">end</span></span><br><span class="line">    means = mean(my_res);</span><br><span class="line">    variances = std(my_res,<span class="number">0</span>,<span class="number">2</span>)^<span class="number">2</span>;</span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
+<p><strong>exercise2.m</strong></p>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">number = [ <span class="number">5</span>, <span class="number">10</span>, <span class="number">20</span>, <span class="number">30</span>, <span class="number">40</span>, <span class="number">50</span>, <span class="number">60</span>, <span class="number">70</span>, <span class="number">80</span>,<span class="number">100</span>];</span><br><span class="line">result = <span class="built_in">zeros</span>(<span class="number">2</span>,<span class="number">10</span>);</span><br><span class="line"><span class="keyword">for</span> <span class="built_in">i</span>=<span class="number">1</span>:<span class="number">10</span></span><br><span class="line">   [result(<span class="number">1</span>,i),result(<span class="number">2</span>,i)] = x3(number(<span class="built_in">i</span>));</span><br><span class="line"><span class="keyword">end</span></span><br><span class="line">result</span><br></pre></td></tr></table></figure>
+<h4 id="实验结果：-1"><a href="#实验结果：-1" class="headerlink" title="实验结果："></a><strong>实验结果：</strong></h4><table>
+<thead>
+<tr>
+<th style="text-align:center"></th>
+<th style="text-align:center">5</th>
+<th style="text-align:center">10</th>
+<th style="text-align:center">20</th>
+<th style="text-align:center">30</th>
+<th style="text-align:center">40</th>
+<th style="text-align:center">50</th>
+<th style="text-align:center">60</th>
+<th style="text-align:center">70</th>
+<th style="text-align:center">80</th>
+<th style="text-align:center">100</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">均值</td>
+<td style="text-align:center">0.2660</td>
+<td style="text-align:center">0.2540</td>
+<td style="text-align:center">0.2460</td>
+<td style="text-align:center">0.2563</td>
+<td style="text-align:center">0.2387</td>
+<td style="text-align:center">0.2502</td>
+<td style="text-align:center">0.2465</td>
+<td style="text-align:center">0.2539</td>
+<td style="text-align:center">0.2616</td>
+<td style="text-align:center">0.2479</td>
+</tr>
+<tr>
+<td style="text-align:center">方差</td>
+<td style="text-align:center">0.0413</td>
+<td style="text-align:center">0.0175</td>
+<td style="text-align:center">0.0101</td>
+<td style="text-align:center">0.0061</td>
+<td style="text-align:center">0.0043</td>
+<td style="text-align:center">0.0041</td>
+<td style="text-align:center">0.0026</td>
+<td style="text-align:center">0.0029</td>
+<td style="text-align:center">0.0025</td>
+<td style="text-align:center">0.0022</td>
+</tr>
+</tbody>
+</table>
+<h2 id="Exercise-3"><a href="#Exercise-3" class="headerlink" title="Exercise 3"></a>Exercise 3</h2><p>不能使用公式直接获得，使用蒙特卡洛方法求定积分</p>
+<p>x使用均分分布采样，重复次数设为100, matlab代码：</p>
+<p><strong>func3.m</strong></p>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="params">[means,variances]</span> = <span class="title">func3</span><span class="params">(num)</span></span></span><br><span class="line">    <span class="comment">% num: 随机样本数</span></span><br><span class="line">    <span class="comment">% 使用蒙特卡洛方法求定积分</span></span><br><span class="line">    my_res = <span class="built_in">zeros</span>(<span class="number">1</span>,<span class="number">100</span>);</span><br><span class="line">    <span class="keyword">for</span> t=<span class="number">1</span>:<span class="number">100</span>     </span><br><span class="line">        <span class="comment">%% 生成随机数</span></span><br><span class="line">        s=rng;</span><br><span class="line">        rng(s);</span><br><span class="line">        x=<span class="number">2</span>+<span class="number">2</span>*<span class="built_in">rand</span>(<span class="number">1</span>,num);</span><br><span class="line">        y=<span class="number">-1</span>+<span class="number">2</span>*<span class="built_in">rand</span>(<span class="number">1</span>,num);</span><br><span class="line">        z=<span class="number">800000</span>*<span class="built_in">rand</span>(<span class="number">1</span>,num);</span><br><span class="line">        <span class="comment">%% 统计线下面的点</span></span><br><span class="line">        total_in=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> <span class="built_in">i</span>=<span class="number">1</span>:num</span><br><span class="line">            d = (y(<span class="number">1</span>,<span class="built_in">i</span>)^<span class="number">2</span>*<span class="built_in">exp</span>(-y(<span class="number">1</span>,<span class="built_in">i</span>)^<span class="number">2</span> )+x(<span class="number">1</span>,<span class="built_in">i</span>)^<span class="number">4</span>*<span class="built_in">exp</span>(-x(<span class="number">1</span>,<span class="built_in">i</span>)^<span class="number">2</span> ))/(x(<span class="number">1</span>,<span class="built_in">i</span>)*<span class="built_in">exp</span>(-x(<span class="number">1</span>,<span class="built_in">i</span>)^<span class="number">2</span> ) );</span><br><span class="line">            <span class="keyword">if</span> z(<span class="number">1</span>,<span class="built_in">i</span>) &lt; d</span><br><span class="line">                total_in=total_in+<span class="number">1</span>;</span><br><span class="line">            <span class="keyword">end</span></span><br><span class="line">        <span class="keyword">end</span>  </span><br><span class="line">        </span><br><span class="line">       <span class="comment">%% 计算结果</span></span><br><span class="line">        my_res(t)=<span class="number">2</span>*<span class="number">2</span>*<span class="number">800000</span>*total_in/num;</span><br><span class="line">    <span class="keyword">end</span></span><br><span class="line">    means = mean(my_res);</span><br><span class="line">    variances = std(my_res,<span class="number">0</span>,<span class="number">2</span>)^<span class="number">2</span>;</span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
+<p><strong>exercise3.m</strong></p>
+<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">format long</span><br><span class="line">number = [<span class="number">10</span>, <span class="number">20</span>, <span class="number">30</span>, <span class="number">40</span>, <span class="number">50</span>, <span class="number">60</span>, <span class="number">70</span>, <span class="number">80</span>,<span class="number">100</span>,<span class="number">200</span>,<span class="number">500</span>];</span><br><span class="line">result = <span class="built_in">zeros</span>(<span class="number">2</span>,<span class="number">11</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> <span class="built_in">i</span>=<span class="number">1</span>:<span class="number">11</span></span><br><span class="line">   [result(<span class="number">1</span>,i),result(<span class="number">2</span>,i)] = func3(number(<span class="built_in">i</span>));</span><br><span class="line"><span class="keyword">end</span></span><br><span class="line">result</span><br></pre></td></tr></table></figure>
+<h4 id="实验结果：-2"><a href="#实验结果：-2" class="headerlink" title="实验结果："></a><strong>实验结果：</strong></h4><table>
+<thead>
+<tr>
+<th style="text-align:center">采样次数N</th>
+<th style="text-align:center">均值</th>
+<th style="text-align:center">方差</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">10</td>
+<td style="text-align:center">1.0e+10 *0.000010560000000</td>
+<td style="text-align:center">1.0e+10 *3.735014141414141</td>
+</tr>
+<tr>
+<td style="text-align:center">20</td>
+<td style="text-align:center">1.0e+10 *0.000009600000000</td>
+<td style="text-align:center">1.0e+10 *1.603232323232323</td>
+</tr>
+<tr>
+<td style="text-align:center">30</td>
+<td style="text-align:center">1.0e+10 *0.000011946666667</td>
+<td style="text-align:center">1.0e+10 *1.109735578002245</td>
+</tr>
+<tr>
+<td style="text-align:center">40</td>
+<td style="text-align:center">1.0e+10 *0.000011760000000</td>
+<td style="text-align:center">1.0e+10 *0.833357575757576</td>
+</tr>
+<tr>
+<td style="text-align:center">50</td>
+<td style="text-align:center">1.0e+10 *0.000011648000000</td>
+<td style="text-align:center">1.0e+10 *0.632025212121212</td>
+</tr>
+<tr>
+<td style="text-align:center">60</td>
+<td style="text-align:center">1.0e+10 *0.000010400000000</td>
+<td style="text-align:center">1.0e+10 *0.559551066217732</td>
+</tr>
+<tr>
+<td style="text-align:center">70</td>
+<td style="text-align:center">1.0e+10 *0.000011337142857</td>
+<td style="text-align:center">1.0e+10 *0.538196330653474</td>
+</tr>
+<tr>
+<td style="text-align:center">80</td>
+<td style="text-align:center">1.0e+10 *0.000010840000000</td>
+<td style="text-align:center">1.0e+10 *0.401761616161616</td>
+</tr>
+<tr>
+<td style="text-align:center">100</td>
+<td style="text-align:center">1.0e+10 *0.000010816000000</td>
+<td style="text-align:center">1.0e+10 *0.409144888888889</td>
+</tr>
+<tr>
+<td style="text-align:center">200</td>
+<td style="text-align:center">1.0e+10 *0.000010640000000</td>
+<td style="text-align:center">1.0e+10 *0.132072727272727</td>
+</tr>
+<tr>
+<td style="text-align:center">500</td>
+<td style="text-align:center">1.0e+10 *0.000011353600000</td>
+<td style="text-align:center">1.0e+10 *0.058057283232323</td>
+</tr>
+</tbody>
+</table>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">软件测试</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">数据挖掘</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://wanggh8.github.io/2019/03/17/DataMining_assign1/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
   
   
-    </div></section>
+    <a href="/2019/03/12/stmt_assign_1/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">软件测试第一次作业</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+  
+  
   
 
-    
+  
+
+  
+
+  
 
 
           </div>
@@ -226,9 +484,9 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,
