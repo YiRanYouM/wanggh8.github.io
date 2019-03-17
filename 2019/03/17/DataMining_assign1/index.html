@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="Blog">
 <meta property="og:description" content="蒙特卡罗方法（英语：Monte Carlo method），也称统计模拟方法，是指使用随机数（或更常见的伪随机数）来解决很多计算问题的方法。在解决实际问题的时候应用蒙特卡罗方法主要有两部分工作：  用蒙特卡罗方法模拟某一过程时，需要产生各种概率分布的随机变量。 用统计方法把模型的数字特征估计出来，从而得到实际问题的数值解。  蒙特卡洛算法也常用于机器学习，特别是强化学习的算法中。一般情况下，针对得">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-03-17T06:17:56.906Z">
+<meta property="og:updated_time" content="2019-03-17T06:23:32.392Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="数据挖掘第一次作业">
 <meta name="twitter:description" content="蒙特卡罗方法（英语：Monte Carlo method），也称统计模拟方法，是指使用随机数（或更常见的伪随机数）来解决很多计算问题的方法。在解决实际问题的时候应用蒙特卡罗方法主要有两部分工作：  用蒙特卡罗方法模拟某一过程时，需要产生各种概率分布的随机变量。 用统计方法把模型的数字特征估计出来，从而得到实际问题的数值解。  蒙特卡洛算法也常用于机器学习，特别是强化学习的算法中。一般情况下，针对得">
@@ -237,7 +237,7 @@
 <figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="params">[means,variances]</span> = <span class="title">x3</span><span class="params">(num)</span></span></span><br><span class="line">    <span class="comment">% num: 随机样本数</span></span><br><span class="line">    <span class="comment">% 使用蒙特卡罗方法求定积分</span></span><br><span class="line">    my_res = <span class="built_in">zeros</span>(<span class="number">1</span>,<span class="number">100</span>);</span><br><span class="line">    <span class="keyword">for</span> t=<span class="number">1</span>:<span class="number">100</span>     </span><br><span class="line">        <span class="comment">%% 生成随机数</span></span><br><span class="line">        s=rng;</span><br><span class="line">        rng(s);</span><br><span class="line">        point=<span class="built_in">rand</span>(<span class="number">2</span>,num);   </span><br><span class="line">        <span class="comment">%% 统计线下面的点</span></span><br><span class="line">        total_in=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> <span class="built_in">i</span>=<span class="number">1</span>:num</span><br><span class="line">            <span class="keyword">if</span> (point(<span class="number">1</span>,<span class="built_in">i</span>))^<span class="number">3</span> &gt; point(<span class="number">2</span>,<span class="built_in">i</span>)</span><br><span class="line">                total_in=total_in+<span class="number">1</span>;</span><br><span class="line">            <span class="keyword">end</span></span><br><span class="line">        <span class="keyword">end</span>     </span><br><span class="line">       <span class="comment">%% 计算结果</span></span><br><span class="line">        my_res(t)=total_in/num;</span><br><span class="line">    <span class="keyword">end</span></span><br><span class="line">    means = mean(my_res);</span><br><span class="line">    variances = std(my_res,<span class="number">0</span>,<span class="number">2</span>)^<span class="number">2</span>;</span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
 <p><strong>exercise2.m</strong></p>
 <figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">number = [ <span class="number">5</span>, <span class="number">10</span>, <span class="number">20</span>, <span class="number">30</span>, <span class="number">40</span>, <span class="number">50</span>, <span class="number">60</span>, <span class="number">70</span>, <span class="number">80</span>,<span class="number">100</span>];</span><br><span class="line">result = <span class="built_in">zeros</span>(<span class="number">2</span>,<span class="number">10</span>);</span><br><span class="line"><span class="keyword">for</span> <span class="built_in">i</span>=<span class="number">1</span>:<span class="number">10</span></span><br><span class="line">   [result(<span class="number">1</span>,i),result(<span class="number">2</span>,i)] = x3(number(<span class="built_in">i</span>));</span><br><span class="line"><span class="keyword">end</span></span><br><span class="line">result</span><br></pre></td></tr></table></figure>
-<h4 id="实验结果：-1"><a href="#实验结果：-1" class="headerlink" title="实验结果："></a><strong>实验结果：</strong></h4><table>
+<h4 id="实验结果：-1"><a href="#实验结果：-1" class="headerlink" title="实验结果："></a>实验结果：</h4><table>
 <thead>
 <tr>
 <th style="text-align:center"></th>
@@ -246,11 +246,6 @@
 <th style="text-align:center">20</th>
 <th style="text-align:center">30</th>
 <th style="text-align:center">40</th>
-<th style="text-align:center">50</th>
-<th style="text-align:center">60</th>
-<th style="text-align:center">70</th>
-<th style="text-align:center">80</th>
-<th style="text-align:center">100</th>
 </tr>
 </thead>
 <tbody>
@@ -261,11 +256,6 @@
 <td style="text-align:center">0.2460</td>
 <td style="text-align:center">0.2563</td>
 <td style="text-align:center">0.2387</td>
-<td style="text-align:center">0.2502</td>
-<td style="text-align:center">0.2465</td>
-<td style="text-align:center">0.2539</td>
-<td style="text-align:center">0.2616</td>
-<td style="text-align:center">0.2479</td>
 </tr>
 <tr>
 <td style="text-align:center">方差</td>
@@ -274,6 +264,25 @@
 <td style="text-align:center">0.0101</td>
 <td style="text-align:center">0.0061</td>
 <td style="text-align:center">0.0043</td>
+</tr>
+<tr>
+<td style="text-align:center"></td>
+<td style="text-align:center"><strong>50</strong></td>
+<td style="text-align:center"><strong>60</strong></td>
+<td style="text-align:center"><strong>70</strong></td>
+<td style="text-align:center"><strong>80</strong></td>
+<td style="text-align:center"><strong>100</strong></td>
+</tr>
+<tr>
+<td style="text-align:center">均值</td>
+<td style="text-align:center">0.2502</td>
+<td style="text-align:center">0.2465</td>
+<td style="text-align:center">0.2539</td>
+<td style="text-align:center">0.2616</td>
+<td style="text-align:center">0.2479</td>
+</tr>
+<tr>
+<td style="text-align:center">方差</td>
 <td style="text-align:center">0.0041</td>
 <td style="text-align:center">0.0026</td>
 <td style="text-align:center">0.0029</td>
