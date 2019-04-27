@@ -6,20 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://wanggh8.github.io">
-  <title>测试要素在各阶段的目标和内容 | Blog</title>
+  <title>计算Halstead复杂度 | Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="测试要素为：易操作性">
+  <meta name="description" content="计算下列代码片段的Halstead 复杂度的11项内容：">
 <meta name="keywords" content="软件测试">
 <meta property="og:type" content="article">
-<meta property="og:title" content="测试要素在各阶段的目标和内容">
+<meta property="og:title" content="计算Halstead复杂度">
 <meta property="og:url" content="http://wanggh8.github.io/2019/03/31/SoftwareTest/stmt_assign_4/index.html">
 <meta property="og:site_name" content="Blog">
-<meta property="og:description" content="测试要素为：易操作性">
+<meta property="og:description" content="计算下列代码片段的Halstead 复杂度的11项内容：">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-03-31T14:47:52.919Z">
+<meta property="og:updated_time" content="2019-04-15T15:32:07.866Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="测试要素在各阶段的目标和内容">
-<meta name="twitter:description" content="测试要素为：易操作性">
+<meta name="twitter:title" content="计算Halstead复杂度">
+<meta name="twitter:description" content="计算下列代码片段的Halstead 复杂度的11项内容：">
   
     <link rel="alternative" href="/atom.xml" title="Blog" type="application/atom+xml">
   
@@ -162,7 +162,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      测试要素在各阶段的目标和内容
+      计算Halstead复杂度
     </h1>
   
 
@@ -175,47 +175,9 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>测试要素为：易操作性</p>
+        <p>计算下列代码片段的Halstead 复杂度的11项内容：</p>
 <a id="more"></a>
-<p>以上学期安卓应用开发的期末项目，一个密码管理器——密码守护者为例，讨论易操作性在软件生命周期的各个阶段的测试目标和内容。</p>
-<ul>
-<li><p>需求</p>
-<ul>
-<li>目标：是否定义易操作要求</li>
-<li>内容：查看文档，是否有文档定义了易操作的要求及其相关文档。</li>
-</ul>
-</li>
-<li><p>设计</p>
-<ul>
-<li>目标：测试是否完成把要求转换为操作设计</li>
-<li>内容：查看设计文档，设计的UI以及页面布局是否符合易操作性，能否满足易操作的要求，是否能被用户接受。设计功能模块，如：用户登陆、添加密码、修改密码、删除密码以及网络同步，以用户易操作为首要目标。</li>
-</ul>
-</li>
-<li><p>编程</p>
-<ul>
-<li>目标：查看代码是否符合设计</li>
-<li>内容：查看代码是否按照设计文档进行实现，是否符合设计文档中的易操作性的要求。</li>
-</ul>
-</li>
-<li><p>测试</p>
-<ul>
-<li>目标：操作测试，是否易操作</li>
-<li>内容：测试操作，UI界面布局是否能够达到易操作的要求，能否满足用户易操作的要求，对于用户登陆、添加密码、修改密码、删除密码以及网络同步等功能模块是否容易操作，是否在UI中比较容易找到，能否让绝大多数用户容易操作</li>
-</ul>
-</li>
-<li><p>安装</p>
-<ul>
-<li>目标：实现操作过程，实现易操作性</li>
-<li>内容：是否容易在手机上安装，是否能够快速打开应用，在实际进行操作中，基本操作和其他功能是否能够满足易操作性</li>
-</ul>
-</li>
-<li><p>维护</p>
-<ul>
-<li>目标：在操作不满足易操作性的时候，修改操作过程</li>
-<li>内容：在经过用户的使用后，发现部分模块或者功能，没有达到预期的易操作性，可以进行修改操作过程</li>
-</ul>
-</li>
-</ul>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (month &lt; <span class="number">3</span>) &#123;</span><br><span class="line">	month += <span class="number">12</span>;</span><br><span class="line">	–year;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">return</span> dayray((<span class="keyword">int</span>)(day + (month + <span class="number">1</span>) * <span class="number">26</span>/<span class="number">10</span> + year + year/<span class="number">4</span> + <span class="number">6</span> * (year/<span class="number">100</span>) + year/<span class="number">400</span>)% <span class="number">7</span>);</span><br></pre></td></tr></table></figure>
 
       
 
@@ -299,18 +261,18 @@
   
 <nav id="article-nav">
   
-    <a href="/2019/04/11/IOS/Foundation/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2019/03/31/SoftwareTest/stmt_assign_3/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          基础框架
+          测试要素在各阶段的目标和内容
         
       </div>
     </a>
   
   
-    <a href="/2019/03/31/SoftwareTest/stmt_assign_3/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">测试要素在各阶段的目标和内容</div>
+    <a href="/2019/03/28/SYSU/专业词汇/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">计算机专有词汇</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -461,6 +423,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">IOS</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">win10</a>
               </li>
             
             <div class="clearfix"></div>
